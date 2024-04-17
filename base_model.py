@@ -23,14 +23,14 @@ def download_hugging_face_embeddings():
     return embeddings
 
 def create_pinecone_index(text_chunks):
-    os.environ['PINECONE_API_KEY'] = 'd1777631-b67a-4002-a8cc-cd6476f60d2c'
+    os.environ['PINECONE_API_KEY'] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     index_name = "bot"
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     docsearch = PineconeVectorStore.from_documents(text_chunks, embeddings, index_name=index_name)
     return docsearch
 
 def setup_conversational_chain():
-    google_api_key = "AIzaSyDNq5NTSohOEl3Gy3exKFQzwv6HIItKvH0"
+    google_api_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     prompt_template = """
     Use the following pieces of information to answer the user's question.
     If you don't know the answer, just say that you don't know, don't try to make up an answer.
