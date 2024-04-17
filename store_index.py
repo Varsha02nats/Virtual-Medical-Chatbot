@@ -20,6 +20,6 @@ text_chunks = text_split(extracted_data)
 #print("Length of text chunks:", len(text_chunks))
 embeddings = download_hugging_face_embeddings()
 
-os.environ['PINECONE_API_KEY'] = 'd1777631-b67a-4002-a8cc-cd6476f60d2c'
+os.environ['PINECONE_API_KEY'] = 'xxxxxxx-xxxxxx-xxxxxx-xxxxxxx'
 index_name = "chatting"
 docsearch = PineconeVectorStore.from_documents(text_chunks, embeddings, index_name=index_name)
