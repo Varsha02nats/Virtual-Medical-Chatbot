@@ -26,7 +26,7 @@ def setup():
     global docsearch
     docsearch = FAISS.load_local(index_path, embeddings, allow_dangerous_deserialization=True)
 
-    # Define prompt template
+    # Define prompt template for bot
     PROMPT = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
 
     # Get Google API key
