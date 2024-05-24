@@ -27,7 +27,7 @@ def setup():
     embeddings = download_hugging_face_embeddings()
 
     # Initializing the Pinecone
-    os.environ['PINECONE_API_KEY'] = 'd1777631-b67a-4002-a8cc-cd6476f60d2c'
+    os.environ['PINECONE_API_KEY'] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     index_name = "chatting"
 
     # Loading the index
