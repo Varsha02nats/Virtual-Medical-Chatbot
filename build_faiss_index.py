@@ -19,7 +19,7 @@ def create_and_save_faiss_index(data_folder, index_path):
     # Create FAISS index
     vector_store = FAISS.from_texts([chunk.page_content for chunk in text_chunks], embedding=embeddings)
 
-    # Save FAISS index
+    # Save FAISS index in path
     vector_store.save_local(index_path)
 
 # Specify the path to the data folder and index path
